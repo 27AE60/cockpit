@@ -24,6 +24,7 @@ COMMANDS=(
   'load:loadCockpit'
   'init:createFile'
   'exit:exitTerminal'
+  'ls:listTabs'
 )
 
 helper() {
@@ -52,6 +53,7 @@ parseConfig() {
     fault=1;
   else
     gnome-terminal "${execute[@]}"
+    echo $!
 	sleep 1
   fi
 }
